@@ -1,9 +1,10 @@
-# README
+# Got Class? - Ruby on Rails Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first attempt at a Ruby on Rails application. I will be creating a simple
+display of my favorite D&D characters, both preset and past. I hope to show each
+characters basic stats as well as a brief bio.
 
-Things you may want to cover:
+Things I want to cover in this tutorial:
 
 * Ruby version
 
