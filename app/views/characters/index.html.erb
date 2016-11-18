@@ -1,0 +1,16 @@
+<h1>Charater List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Biography</th>
+  </tr>
+
+  <% @characters.each do |character| %>
+    <tr>
+      <td><%= character.name %></td>
+      <td><%= character.bio %></td>
+      <td><%= link_to 'More Info...', character_path(character) %></td>
+    </tr>
+  <% end %>
+</table>
