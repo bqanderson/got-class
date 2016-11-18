@@ -3,12 +3,12 @@ class CreateCharacters < ActiveRecord::Migration[5.0]
     create_table :characters do |t|
       t.string :name
       t.text :bio
-      t.numeric :str
-      t.numeric :dex
-      t.numeric :con
-      t.numeric :int
-      t.numeric :wis
-      t.numeric :cha
+      t.integer :str
+      t.integer :dex
+      t.integer :con
+      t.integer :int
+      t.integer :wis
+      t.integer :cha
 
       t.timestamps
     end
