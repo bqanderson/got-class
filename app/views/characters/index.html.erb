@@ -10,7 +10,8 @@
     <tr>
       <td><%= character.name %></td>
       <td><%= character.bio %></td>
-      <td><%= link_to 'More Info...', character_path(character) %></td>
+      <td><%= link_to 'More Info', character_path(character) %></td>
+      <td><%= link_to 'Edit', edit_character_path(character) %></td>
     </tr>
   <% end %>
 </table>

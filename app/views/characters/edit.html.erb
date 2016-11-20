@@ -1,0 +1,58 @@
+<h1>Editing a Character</h1>
+<%= form_for :character, url: character_path(@character), method: :patch do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@character.errors.count, "error") %> prohibited this
+        character from being saved.
+      </h2>
+      <ul>
+        <% @character.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </p>
+
+  <h2>Ability Scores</h2>
+  <p>
+    <%= f.label :strength %>
+    <%= f.number_field :str %>
+  </p>
+  <p>
+    <%= f.label :dexterity %>
+    <%= f.number_field :dex %>
+  </p>
+  <p>
+    <%= f.label :constitution %>
+    <%= f.number_field :con %>
+  </p>
+  <p>
+    <%= f.label :intelligence %>
+    <%= f.number_field :int %>
+  </p>
+  <p>
+    <%= f.label :wisdom %>
+    <%= f.number_field :wis %>
+  </p>
+  <p>
+    <%= f.label :charisma %>
+    <%= f.number_field :cha %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+  <%= link_to 'See Character List', characters_path %>

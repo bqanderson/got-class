@@ -1,3 +1,100 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+/* =Scss Variables
+-------------------------------------------------------------- */
+// My color scheme
+$primary: #c0b283;
+$secondary: #dcd0c0;
+$highlight: #f4f4f4;
+$lowlight: #373737;
+$white: #f1f1f1;
+
+// My fonts
+@import url('https://fonts.googleapis.com/css?family=Prompt:200|Roboto');
+$headline-font: 'Prompt', sans-serif;
+$body-font: 'Roboto', sans-serif;
+
+// background patterns (from heropattern.com)
+$bg-cage: url(../images/cage.svg);
+$bg-cboard: url(../images/circuit-board.svg);
+$bg-diag: url(../images/diagonal-lines.svg);
+$bg-cloud: url(../images/endless-clouds.svg);
+$bg-eyes: url(../images/eyes.svg);
+$bg-cogs: url(../images/floating-cogs.svg);
+$bg-hounds: url(../images/houndstooth.svg);
+$bg-signal: url(../images/signal.svg);
+
+/* =Global
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background-color: $primary;
+  color: $lowlight;
+  font-family: $body-font;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+  font-family: $headline-font;
+	line-height:1;
+}
+a {
+    text-decoration:none;
+}
