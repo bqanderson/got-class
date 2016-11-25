@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Biography</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @characters.each do |character| %>
@@ -12,6 +13,11 @@
       <td><%= character.bio %></td>
       <td><%= link_to 'More Info', character_path(character) %></td>
       <td><%= link_to 'Edit', edit_character_path(character) %></td>
+      <td><%= link_to 'Delete', character_path(character),
+              method: :delete,
+              data: { confirm: 'Do you really want to delete this character?'} %></td>
     </tr>
   <% end %>
 </table>
+
+<p><%= link_to 'Add a new character', new_character_path %></p>
