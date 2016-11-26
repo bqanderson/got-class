@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  resources :characters
+  resources :characters do
+    resources :tales
+  end
 
   root 'welcome#index'
 

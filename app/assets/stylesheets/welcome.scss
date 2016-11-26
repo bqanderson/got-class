@@ -83,7 +83,7 @@ $bg-signal: url(../images/signal.svg);
 }
 
 body {
-  background-color: $primary;
+  background-color: $highlight;
   color: $lowlight;
   font-family: $body-font;
   font-size: 16px;
@@ -94,6 +94,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $headline-font;
 	line-height:1;
+	padding: 2em 0;
 }
 a {
     text-decoration:none;
