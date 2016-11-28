@@ -1,0 +1,15 @@
+<%= form_for([@character, @character.tales.build]) do |f| %>
+  <p>
+    <%= f.label :player %><br>
+    <%= f.text_field :player %>
+  </p>
+
+  <p>
+    <%= f.label :story %><br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
