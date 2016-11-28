@@ -1,11 +1,13 @@
 <h1>Charater List</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Biography</th>
-    <th colspan="3"></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Biography</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
   <% @characters.each do |character| %>
     <tr>
@@ -20,4 +22,4 @@
   <% end %>
 </table>
 
-<p><%= link_to 'Add a new character', new_character_path %></p>
+<p class="footer"><%= link_to 'Add a new character', new_character_path %></p>

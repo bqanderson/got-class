@@ -1,7 +1,7 @@
-<p>
+<h2>
   <strong>Name:</strong>
   <%= @character.name %>
-</p>
+</h2>
 
 <p>
   <strong>Biography:</strong>
@@ -34,5 +34,34 @@
   <%= @character.cha %>
 </p>
 
-<%= link_to 'Make Changes', edit_character_path(@character) %>
-<%= link_to 'Return to Character List', characters_path %>
+<h2>Great tales of epic heroics:</h2>
+<% @character.tale.each do |tale| %>
+  <p>
+    <strong>Epic Tale:</strong>
+    <%= tale.story %>
+  </p>
+
+  <p>
+    <strong>Told by:</strong>
+    <%= tale.player %>
+  </p>
+<% end %>
+
+<h2>Add a new tale of epic heroics:</h2>
+<%= form_for([@character, @character.tales.build]) do |f| %>
+<p>
+  <%= f.label :player %><br>
+  <%= f.text_field :player %>
+</p>
+
+<p>
+  <%= f.label :story %><br>
+  <%= f.text_area :story %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<%= link_to 'Make Changes', edit_character_path(@character) %> |
+<%= link_to 'See Character List', characters_path %>

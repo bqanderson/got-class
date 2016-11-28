@@ -94,8 +94,12 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $headline-font;
 	line-height:1;
-	padding: 2em 0;
+	padding: 0.75em 0;
 }
 a {
     text-decoration:none;
+}
+
+p {
+	padding-top: 0.5em;
 }

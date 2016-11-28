@@ -89,10 +89,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 a {
     text-decoration:none;
-		color: $secondary;
+		color: $primary;
+		padding-top: 1.5em;
 		&:hover {
 			color: darken($secondary, 15%);
 		}
+}
+
+p {
+	padding-top: 0.5em;
 }
 
 /* Include CSS Normalize */
@@ -129,7 +134,7 @@ table {
       font-weight: 400;
 			text-align: left;
 			@include heading-font-regular;
-			font-size: 1.25em;
+			font-size: 1em;
 		}
 
 	}
@@ -221,7 +226,7 @@ table {
 		}
 
 		tr:nth-of-type(even) {
-			//background: $gray-color;
+			background: $primary;
 			td {
 
 				&:before {
