@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20161125131737) do
 
   create_table "tales", force: :cascade do |t|
     t.string   "player"
-    t.text     "story"
+    t.text     "body"
     t.integer  "character_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

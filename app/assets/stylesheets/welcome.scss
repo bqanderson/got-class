@@ -58,19 +58,9 @@ $lowlight: #373737;
 $white: #f1f1f1;
 
 // My fonts
-@import url('https://fonts.googleapis.com/css?family=Prompt:200|Roboto');
-$headline-font: 'Prompt', sans-serif;
-$body-font: 'Roboto', sans-serif;
-
-// background patterns (from heropattern.com)
-$bg-cage: url(../images/cage.svg);
-$bg-cboard: url(../images/circuit-board.svg);
-$bg-diag: url(../images/diagonal-lines.svg);
-$bg-cloud: url(../images/endless-clouds.svg);
-$bg-eyes: url(../images/eyes.svg);
-$bg-cogs: url(../images/floating-cogs.svg);
-$bg-hounds: url(../images/houndstooth.svg);
-$bg-signal: url(../images/signal.svg);
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,900|Libre+Baskerville:400,700');
+$headline-font: 'Cinzel', serif;
+$body-font: 'Libre Baskerville', serif;
 
 /* =Global
 -------------------------------------------------------------- */
@@ -83,7 +73,7 @@ $bg-signal: url(../images/signal.svg);
 }
 
 body {
-  background-color: $highlight;
+  background-color: $white;
   color: $lowlight;
   font-family: $body-font;
   font-size: 16px;
@@ -94,10 +84,22 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $headline-font;
 	line-height:1;
-	padding: 0.75em 0;
+	margin: 0.75em 0;
+	&.brand {
+		border-bottom: 1px solid $lowlight;
+	}
 }
 a {
     text-decoration:none;
+		color: $primary;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		transition: all 0.3s;
+		padding: 0.5em 0;
+		&:hover {
+			color: darken($primary, 10%);
+		}
 }
 
 p {

@@ -59,9 +59,9 @@ $lowlight: #373737;
 $white: #f1f1f1;
 
 // My fonts
-@import url('https://fonts.googleapis.com/css?family=Prompt:200|Roboto');
-$headline-font: 'Prompt', sans-serif;
-$body-font: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,900|Libre+Baskerville:400,700');
+$headline-font: 'Cinzel', serif;
+$body-font: 'Libre Baskerville', serif;
 
 /* =Global
 -------------------------------------------------------------- */
@@ -123,6 +123,7 @@ main {
 
 ///BASIC TABLE STYLING
 table {
+	@include heading-font-regular;
 	border-collapse: collapse;
 	width: 100%;
 	float: left;
@@ -133,7 +134,6 @@ table {
 			padding: 0.35em 0 .35em;
       font-weight: 400;
 			text-align: left;
-			@include heading-font-regular;
 			font-size: 1em;
 		}
 
