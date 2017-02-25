@@ -1,44 +1,53 @@
-<h2>
-  <strong>Name:</strong>
-  <%= @character.name %>
-</h2>
+<%= render 'welcome/header' %>
 
-<p>
-  <strong>Biography:</strong>
-  <%= @character.bio %>
-</p>
+<main>
+  <div class="container">
+    <section>
+      <h2 class="heading-2">
+        <%= @character.name %>
+      </h2>
 
-<h2>Ability Scores</h2>
-<p>
-  <strong>Strenght:</strong>
-  <%= @character.str %>
-</p>
-<p>
-  <strong>Dexterity:</strong>
-  <%= @character.dex %>
-</p>
-<p>
-  <strong>Constitution:</strong>
-  <%= @character.con %>
-</p>
-<p>
-  <strong>Intelligence:</strong>
-  <%= @character.int %>
-</p>
-<p>
-  <strong>Wisdom:</strong>
-  <%= @character.wis %>
-</p>
-<p>
-  <strong>Charisma:</strong>
-  <%= @character.cha %>
-</p>
+      <p class="paragraph">
+        <span class="emphasize">Biography:</span>
+        <%= @character.bio %>
+      </p>
 
-<h2>Great tales of epic heroics:</h2>
-<%= render @character.tales %>
+      <h2 class="heading-2">Ability Scores</h2>
+      <p class="abilities">
+        <span class="bold">Strenght:</span>
+        <%= @character.str %>
+      </p>
+      <p class="abilities">
+        <span class="bold">Dexterity:</span>
+        <%= @character.dex %>
+      </p>
+      <p class="abilities">
+        <span class="bold">Constitution:</span>
+        <%= @character.con %>
+      </p>
+      <p class="abilities">
+        <span class="bold">Intelligence:</span>
+        <%= @character.int %>
+      </p>
+      <p class="abilities">
+        <span class="bold">Wisdom:</span>
+        <%= @character.wis %>
+      </p>
+      <p class="abilities">
+        <span class="bold">Charisma:</span>
+        <%= @character.cha %>
+      </p>
 
-<h2>Add a new tale of epic heroics:</h2>
-<%= render 'tales/form' %>
+      <h2 class="heading-2">Great tales of epic heroics:</h2>
+        <%= render @character.tales %>
 
-<%= link_to 'Make Changes', edit_character_path(@character) %> |
-<%= link_to 'See Character List', characters_path %>
+      <h2>Add a new tale of epic heroics:</h2>
+      <%= render 'tales/form' %>
+
+      <%= link_to 'Make Changes', edit_character_path(@character) %> |
+      <%= link_to 'See Character List', characters_path %> |
+      <%= link_to 'Home', '/' %>
+
+    </section>
+  </div>
+</main>

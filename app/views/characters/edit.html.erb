@@ -1,5 +1,16 @@
-<h1>Editing a Character</h1>
+<%= render 'welcome/header' %>
 
-<%= render 'form' %>
+<main>
+  <div class="container">
+    <section>
+      <h1 class="heading-1">Editing a Character</h1>
 
-<%= link_to 'See Character List', characters_path %>
+      <%= render 'form' %>
+
+      <p class="footer">
+        <%= link_to 'Add a new character', new_character_path %> |
+        <%= link_to 'Home', '/' %>
+      </p>
+    </section>
+  </div>
+</main>

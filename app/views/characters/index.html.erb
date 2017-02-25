@@ -1,25 +1,36 @@
-<h1>Charater List</h1>
+<%= render 'welcome/header' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Biography</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<main>
+  <div class="container">
+    <section>
+      <h1 class="heading-1">Charater List</h1>
 
-  <% @characters.each do |character| %>
-    <tr>
-      <td><%= character.name %></td>
-      <td><%= character.bio %></td>
-      <td><%= link_to 'More Info', character_path(character) %></td>
-      <td><%= link_to 'Edit', edit_character_path(character) %></td>
-      <td><%= link_to 'Delete', character_path(character),
-              method: :delete,
-              data: { confirm: 'Do you really want to delete this character?' } %></td>
-    </tr>
-  <% end %>
-</table>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Biography</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<p class="footer"><%= link_to 'Add a new character', new_character_path %></p>
+        <% @characters.each do |character| %>
+          <tr>
+            <td><%= character.name %></td>
+            <td><%= character.bio %></td>
+            <td><%= link_to 'More Info', character_path(character) %></td>
+            <td><%= link_to 'Edit', edit_character_path(character) %></td>
+            <td><%= link_to 'Delete', character_path(character),
+                    method: :delete,
+                    data: { confirm: 'Do you really want to delete this character?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+
+      <p class="footer">
+        <%= link_to 'Add a new character', new_character_path %> |
+        <%= link_to 'Home', '/' %>
+      </p>
+    </section>
+  </div>
+</main>

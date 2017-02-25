@@ -1,3 +1,10 @@
-<h1 class="brand">The many characters of Bones &amp; Co.</h1>
-<%= link_to 'View characters', controller: 'characters' %> |
-<%= link_to 'Add a new character', new_character_path %>
+<%= render 'header' %>
+
+<main>
+  <div class="container">
+    <section>
+      <%= link_to 'View characters', controller: 'characters' %> |
+      <%= link_to 'Add a new character', new_character_path %>
+    </section>
+  </div>
+</main>
