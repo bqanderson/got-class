@@ -52,8 +52,12 @@ $black: 900;
 .paragraph {
   @include type-setting(0);
   font-weight: $regular;
-  width: 70%;
-  margin: 0 auto $base-line-height auto;
+  margin: 0 auto $base-line-height * 0.5 auto;
+}
+
+.abilities {
+  @include type-setting(0);
+  font-weight: $regular;
 }
 
 .bold {
