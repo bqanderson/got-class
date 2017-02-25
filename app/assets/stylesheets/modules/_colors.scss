@@ -1,0 +1,11 @@
+$display-colors: (
+  'blue': #112b80,
+  'light-blue': #707fb3,
+  'black': #2e2e2e,
+  'grey': #7f7f7f,
+  'white': #fff
+);
+
+@function display-color($name) {
+  @return map-get($display-colors, $name);
+};
