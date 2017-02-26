@@ -14,20 +14,16 @@
 
 .btn {
   display: inline-block;
+  @include type-setting(-1);
   appearance: none;
   background: none;
   color: display-color('light-blue');
   border: solid 1px display-color('light-blue');
-  line-height: $base-line-height;
-  height: $base-line-height;
   padding: 0 1rem;
-  font-size: type-scale(-1);
+  margin-right: $base-line-height * 0.5;
   @include transition(all 0.3s);
   &:hover {
     background-color: display-color('light-blue');
     color: display-color('white');
-    a {
-      color: display-color('white');
-    }
   }
 }

@@ -44,9 +44,9 @@
       <h2>Add a new tale of epic heroics:</h2>
       <%= render 'tales/form' %>
 
-      <%= link_to 'Make Changes', edit_character_path(@character) %> |
-      <%= link_to 'See Character List', characters_path %> |
-      <%= link_to 'Home', '/' %>
+      <%= link_to 'Make Changes', edit_character_path(@character), class: 'btn' %>
+      <%= link_to 'See Character List', characters_path, class: 'btn' %>
+      <%= link_to 'Home', '/', class: 'btn' %>
 
     </section>
   </div>

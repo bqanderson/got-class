@@ -8,8 +8,9 @@
       <%= render 'form' %>
 
       <p class="footer">
-        <%= link_to 'Add a new character', new_character_path %> |
-        <%= link_to 'Home', '/' %>
+        <%= link_to 'View character', character_path, class: 'btn' %>
+        <%= link_to 'Add a new character', new_character_path, class: 'btn' %>
+        <%= link_to 'Home', '/', class: 'btn' %>
       </p>
     </section>
   </div>

@@ -7,10 +7,7 @@
 
       <%= render 'form' %>
 
-      <p class="footer">
-        <%= link_to 'Add a new character', new_character_path %> |
-        <%= link_to 'Home', '/' %>
-      </p>
+      <%= link_to 'Add a new character', new_character_path, class: 'btn' %><%= link_to 'Home', '/', class: 'btn' %>
     </section>
   </div>
 </main>
