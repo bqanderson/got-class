@@ -5,19 +5,16 @@
 form{
   margin:0;
 
-  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.cartUpdate):not(.qtyInput),textarea{
+  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.qtyInput),textarea{
     @include type-setting(-1);
     border: solid 1px display-color('light-blue');
-    padding:5px 10px;
-    width:100%;
+    padding: 0 1rem;
     outline:none;
-    margin:0 0 20px;
+    margin:0 0 $base-line-height;
     -webkit-appearance:none;
 
     &:not(textarea){
-      height:50px;
-      padding:5px 10px;
-      line-height:48px;
+      padding: 0 1rem;
     }
     @include placeholder {
       color: display-color('grey');
@@ -160,6 +157,24 @@ input.qtyInput{
   &:focus{
     ::-webkit-inner-spin-button {
   opacity: 1
+    }
+  }
+}
+
+.new_tale, .edit_character{
+  input[type="submit"]{
+    display: inline-block;
+    @include type-setting(-1);
+    appearance: none;
+    background-color: display-color('blue');
+    color: display-color('white');
+    border: solid 1px display-color('blue');
+    padding: 0 1rem;
+    margin-right: $base-line-height * 0.5;
+    @include transition(all 0.3s);
+    &:hover {
+      background: none;
+      color: display-color('blue');
     }
   }
 }
